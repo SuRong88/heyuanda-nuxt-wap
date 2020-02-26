@@ -6,6 +6,10 @@
                 <h2 class="banner-title">{{ bannerTitle }}</h2>
             </div>
             <div class="content">
+                <nuxt-link to="/solutions" tag="button" class="btn-back-list">
+                    <img class="icon-img" src="@/assets/images/icons/back-icon.png" alt="" />
+                    返回列表
+                </nuxt-link>
                 <section class="sec01">
                     <h2 class="con-tit">方案概述</h2>
                     <p class="con-txt">
@@ -108,6 +112,9 @@ export default {
     components: {
         vNav,
         vFooter
+    },
+    layout: function(context) {
+        return 'default02';
     },
     computed: {
         swiper() {

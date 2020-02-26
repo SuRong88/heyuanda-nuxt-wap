@@ -55,10 +55,6 @@ export default {
             return this.$store.state.webInfo;
         }
     },
-    validate({ params }) {
-        // 必须是number类型
-        return /^\d+$/.test(params.id);
-    },
     head() {
         return {
             title: this.SEOInfo.seo_title,
@@ -78,7 +74,7 @@ export default {
     },
     created() {
         let seoKey = this.$route.path;
-        this.currentIndex = this.$route.params.id * 1 - 1;
+        this.currentIndex = 1;
         this.$admin_base(
             [
                 this.$get(URL.getSEOInfo, {

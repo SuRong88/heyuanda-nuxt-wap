@@ -52,6 +52,7 @@ export default {
         }
     }
     .v-footer {
+        width: 100vw;
         position: fixed;
         left: 0;
         bottom: 0;

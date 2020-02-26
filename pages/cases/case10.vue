@@ -7,6 +7,10 @@
                 <h2 class="banner-title">{{ bannerTitle }}</h2>
             </div>
             <div class="content">
+                <nuxt-link to="/cases" tag="button" class="btn-back-list">
+                    <img class="icon-img" src="@/assets/images/icons/back-icon.png" alt="" />
+                    返回列表
+                </nuxt-link>
                 <section class="sec sec01">
                     <h2 class="con-tit">案例描述</h2>
                     <p class="txt">
@@ -66,6 +70,9 @@ export default {
     components: {
         vNav,
         vFooter
+    },
+    layout: function(context) {
+        return 'default02';
     },
     head() {
         return {

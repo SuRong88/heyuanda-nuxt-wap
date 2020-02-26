@@ -42,6 +42,9 @@ export default {
         vNav,
         vFooter
     },
+    layout: function(context) {
+        return 'default02';
+    },
     created() {
         let seoKey = this.$route.path;
         this.$admin_base(
