@@ -109,7 +109,7 @@
     },
     mounted() {
       // 渲染地图
-      this.renderMap(23.09734984, 113.30348106);
+      this.renderMap(23.0992390000,113.2974700000);
     },
     data() {
       return {
