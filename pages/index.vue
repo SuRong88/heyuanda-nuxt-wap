@@ -61,7 +61,12 @@
                             <div class="sub-swiper-box" v-if="currentSubList.length">
                                 <swiper class="index-sub-swiper" :options="swiperSubOption" ref="indexSubSwiper">
                                     <swiper-slide :key="currentSubIndex+'-'+index" v-if="currentSubList.length" v-for="(item, index) in currentSubList" class="sub-swiper-item flex flex-align-center">
-                                        <div class="sub-swiper-inner flex flex-center">
+                                        <nuxt-link :to="item.link" v-if="item.link" class="sub-swiper-inner flex flex-center">
+                                            <img class="sub-inner-bg" src="@/assets/images/index/index_4_img01.png" alt="" />
+                                            <img class="sub-inner-icon" :src="item.img_url" alt="" />
+                                            <p class="sub-inner-txt">{{ item.text }}</p>
+                                        </nuxt-link>
+                                        <div v-else class="sub-swiper-inner flex flex-center">
                                             <img class="sub-inner-bg" src="@/assets/images/index/index_4_img01.png" alt="" />
                                             <img class="sub-inner-icon" :src="item.img_url" alt="" />
                                             <p class="sub-inner-txt">{{ item.text }}</p>
@@ -83,30 +88,10 @@
                         </div>
                         <div class="inner-bottom">
                             <ul class="scheme-box flex flex-wrap">
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon01.png" alt="" />
-                                    <span class="scheme-txt">电信行业解决方案</span>
-                                </li>
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon02.png" alt="" />
-                                    <span class="scheme-txt">金融</span>
-                                </li>
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon03.png" alt="" />
-                                    <span class="scheme-txt">医疗</span>
-                                </li>
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon04.png" alt="" />
-                                    <span class="scheme-txt">环保</span>
-                                </li>
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon05.png" alt="" />
-                                    <span class="scheme-txt">电商</span>
-                                </li>
-                                <li class="scheme-item flex flex-center">
-                                    <img class="scheme-icon" src="@/assets/images/index/index_5_icon06.png" alt="" />
-                                    <span class="scheme-txt">交通</span>
-                                </li>
+                                <nuxt-link tag="li" :to="item.link" v-for="item in solutionList" class="scheme-item flex flex-center">
+                                    <img class="scheme-icon" :src="item.img_url" alt="" />
+                                    <span class="scheme-txt">{{item.text}}</span>
+                                </nuxt-link>
                             </ul>
                         </div>
                     </div>
@@ -204,57 +189,100 @@ export default {
                 [
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-1.png'),
-                        text: '大数据智慧交通应用'
+                        text: '大数据智慧交通应用',
+                        link: '/products/1?index=1'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-2.png'),
-                        text: '大数据旅游分析应用'
+                        text: '大数据旅游分析应用',
+                        link:''
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-3.png'),
-                        text: '大数据交通分析应用'
+                        text: '大数据交通分析应用',
+                        link:''
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-4.png'),
-                        text: '大数据人口分析应用'
+                        text: '大数据人口分析应用',
+                        link:''
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-5.png'),
-                        text: '大数据商圈分析应用'
+                        text: '大数据商圈分析应用',
+                        link: '/products/1?index=2'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon01-6.png'),
-                        text: '大数据选址分析应用'
+                        text: '大数据选址分析应用',
+                        link:''
                     }
                 ],
                 [
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon02-1.png'),
-                        text: 'DMP平台'
+                        text: 'DMP平台',
+                        link: '/products/2?index=3'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon02-2.png'),
-                        text: '智慧容量专家'
+                        text: '智慧容量专家',
+                        link: '/products/2?index=2'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon02-3.png'),
-                        text: '大数据生产管理平台'
+                        text: '大数据生产管理平台',
+                        link: '/products/2?index=1'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon02-4.png'),
-                        text: '食品安全追溯系统(区块链)'
+                        text: '食品安全追溯系统(区块链)',
+                        link: '/products/1?index=3'
                     }
                 ],
                 [
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon03-1.png'),
-                        text: '和元达数据管理一体机'
+                        text: '和元达数据管理一体机',
+                        link: '/products/3?index=0'
                     },
                     {
                         img_url: require('@/assets/images/index/icon/index_4_icon03-2.png'),
-                        text: '机房统一监控系统TUMS'
+                        text: '机房统一监控系统TUMS',
+                        link: '/products/3?index=1'
                     }
                 ]
+            ],
+           // 第五屏解决方案 
+            solutionList:[
+                {
+                    img_url:require("@/assets/images/index/index_5_icon01.png"),
+                    text:"电信行业解决方案",
+                    link: '/solutions'
+                },
+                {
+                    img_url:require("@/assets/images/index/index_5_icon02.png"),
+                    text:"金融",
+                    link: '/solutions'
+                },{
+                    img_url:require("@/assets/images/index/index_5_icon03.png"),
+                    text:"医疗",
+                    link: '/solutions'
+                },
+                {
+                    img_url:require("@/assets/images/index/index_5_icon04.png"),
+                    text:"环保",
+                    link: '/solutions'
+                },{
+                    img_url:require("@/assets/images/index/index_5_icon05.png"),
+                    text:"电商",
+                    link: '/solutions'
+                },
+                {
+                    img_url:require("@/assets/images/index/index_5_icon06.png"),
+                    text:"交通",
+                    link: '/solutions'
+                }
             ]
         };
     },
