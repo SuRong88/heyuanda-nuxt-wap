@@ -1158,15 +1158,16 @@ body .layui-layer-title {
     .about-title-box {
         padding: 4rem;
         .about-title-cn {
-            // font-weight: 400;
             font-size: 2.2rem;
             color: #333333;
             text-align: center;
             line-height: 2.8rem;
-            margin-bottom: 0.4rem;
+            // margin-bottom: 0.4rem;
+            margin-bottom: 0;
         }
         .about-title-en {
             // font-weight: 400;
+            display: none;
             font-size: 1.4rem;
             color: #999999;
             text-align: center;
@@ -1413,11 +1414,20 @@ body .layui-layer-title {
 }
 // 关于我们->联系我们
 .about-page.about-contact {
-    .contact-title {
+    .contact-title-box {
         padding: 4rem 0;
+    }
+    .contact-title-cn {
+        margin-bottom: 0.4rem;
         font-size: 2rem;
         color: #333333;
         text-align: center;
+    }
+    .contact-title-en {
+        font-size: 1.4rem;
+        color: #999;
+        text-align: center;
+        line-height: 1;
     }
     .contact-item {
         width: 50%;
@@ -2327,7 +2337,7 @@ body .layui-layer-title {
                 text-align: justify;
                 text-indent: 2em;
                 line-height: 28px;
-                &.txt-center{
+                &.txt-center {
                     text-align: center;
                     text-indent: 0;
                 }
@@ -2342,7 +2352,7 @@ body .layui-layer-title {
                 text-align: justify;
                 text-indent: 2em;
                 line-height: 3.2rem;
-                 &.txt-center{
+                &.txt-center {
                     text-align: center;
                     text-indent: 0;
                 }
@@ -2355,7 +2365,7 @@ body .layui-layer-title {
                 text-align: justify;
                 text-indent: 2em;
                 line-height: 2.8rem;
-                 &.txt-center{
+                &.txt-center {
                     text-align: center;
                     text-indent: 0;
                 }
@@ -2368,7 +2378,7 @@ body .layui-layer-title {
                 text-align: justify;
                 text-indent: 2em;
                 line-height: 2.8rem;
-                 &.txt-center{
+                &.txt-center {
                     text-align: center;
                     text-indent: 0;
                 }

@@ -8,7 +8,10 @@
                     <h2 class="about-title-cn">{{ titleCn }}</h2>
                     <h2 class="about-title-en">{{ titleEn }}</h2>
                 </div> -->
-        <h2 class="contact-title">{{webInfo.website_name}}</h2>
+        <div class="contact-title-box">
+          <h2 class="contact-title-cn">{{webInfo.website_name}}</h2>
+          <h2 class="contact-title-en">TechViewInfo Co.,Ltd（TVI）</h2>
+        </div>
         <!-- 联系信息 -->
         <ul class="contact-box clearfix">
           <li class="contact-item fl">
