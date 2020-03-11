@@ -5,7 +5,7 @@
       <div class="content-hd">
         <div class="date-box">
           <span class="date">
-            {{detail.create_time | formatDate('yyyy年MM月dd日')}}
+            {{detail.create_time | dateformat('YYYY年MM月DD日')}}
           </span>
           <span class="type">{{ typeTitle }}</span>
         </div>

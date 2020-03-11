@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import moment from 'moment'
 function formatDate(value, fmt) {
   let getDate = new Date(value);
   let o = {
@@ -20,4 +21,8 @@ function formatDate(value, fmt) {
   }
   return fmt;
 }
+Vue.filter('dateformat', function(dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+    return moment(dataStr).format(pattern)
+
+})
 Vue.filter('formatDate', formatDate);

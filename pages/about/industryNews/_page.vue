@@ -21,10 +21,12 @@
             <div class="item-brief flex flex-start">
               <div class="date-box">
                 <span class="month-day">
-                  {{ item.create_time | formatDate('MM-dd') }}
+                  <!-- {{ item.create_time.slice(0, 10).slice(5, 10) || '' }} -->
+                  {{ item.create_time | dateformat('MM-DD') }}
                 </span>
                 <span class="year">
-                  {{ item.create_time | formatDate('yyyy') }}
+                  <!-- {{ item.create_time.slice(0, 10).slice(0, 4) || '' }} -->
+                  {{ item.create_time | dateformat('YYYY') }}
                 </span>
               </div>
               <h3 class="item-tit">
