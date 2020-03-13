@@ -38,7 +38,7 @@
                 <div class="swiper-pagination" id="swiperP" slot="pagination"></div>
             </swiper>
         </no-ssr>
-        <p class="copyright">{{ webInfo.website_name }}{{ webInfo.website_copyright }}{{ webInfo.website_icp_numb }}</p>
+        <a href="http://www.beian.miit.gov.cn" target="_blank" class="copyright">{{ webInfo.website_name }}{{ webInfo.website_copyright }}{{ webInfo.website_icp_numb }}</a>
     </div>
 </template>
 <script>
